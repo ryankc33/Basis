@@ -52,4 +52,6 @@ group :test do
 end
 
 gem 'thin'
+gem 'foundation-rails'
+gem 'rails_admin'
 

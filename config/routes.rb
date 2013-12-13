@@ -1,4 +1,8 @@
 Moneybaby::Application.routes.draw do
+  
+  devise_for :admins
+  mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
+  
   root "static_pages#home"
   get "static_pages/help"
   get "static_pages/about"
