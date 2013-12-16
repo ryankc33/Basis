@@ -1,0 +1,30 @@
+<nav class="top-bar shadow" data-topbar>
+  <ul class="title-area">
+    <li class="name">
+      <h1>
+		<%= link_to image_tag("logoblue.png", width: 150, alt: "Compare Insurance and financial products with Moneybaby"), root_path %>
+	 </h1>
+    </li>
+    <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+  </ul>
+
+  <section class="top-bar-section">
+    <!-- Right Nav Section -->
+    <ul class="right">
+      <li class="active"><a href="#">Right Nav Button Active</a></li>
+      <li class="has-dropdown">
+        <a href="#">Right Button with Dropdown</a>
+        <ul class="dropdown">
+          <li><a href="#">First link in dropdown</a></li>
+        </ul>
+      </li>
+    </ul>
+	    <!-- Left Nav Section -->
+	 <ul class="left">
+	 	<li><a href="#">Insurance</a></li>
+		<li><a href="#">Money</a></li>
+		<li><a href="#">Blog</a></li>
+		<li><%= link_to_function "More", "$('#more').slideToggle(150)" %></li>
+	 </ul>
+	</section>
+</nav>

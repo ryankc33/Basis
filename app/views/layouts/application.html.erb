@@ -12,105 +12,18 @@
   </head>
 
   <body>
-	
-	  <footer class="drawer hide" id="more">
-	      <div class="row">
-			<%= link_to_function "X", "$('#more').slideToggle(150)", class: "right" %>
-		  </div>
-		  <div class="row nopadding">
-			<div class="large-3 columns">
-				<ul class="nobullet">
-	        		<h3>About</h3>  
-			    	<li><a href="#">About Moneybaby</a></li>
-					<li><a href="#">Jobs</a></li>
-					<li><a href="#">Policies</a></li>
-				</ul>
-		 	</div>
-			<div class="large-3 columns"> 
-				<ul class="nobullet">
-	        		<h3>Support</h3>  
-			    	<li><a href="#">...</a></li>
-					<li><a href="#">...</a></li>
-					<li><a href="#">...</a></li>
-				</ul>
-		 	</div>
-			<div class="large-3 columns">
-				<ul class="nobullet">
-	        		<h3>Resources</h3>
-			    	<li><a href="#">Guides</a></li>
-					<li><a href="#">Experts</a></li>
-				</ul>
-		 	</div>
-			<div class="large-3 columns">
-				<ul class="nobullet">
-	        		<h3>Contact us</h3>
-			    	<li><a href="#">Contact Moneybaby</a></li>
-					<li><a href="#">Feedback</a></li>
-					<li><a href="#">Press</a></li>
-				</ul>  
-		 	</div>
-		  </div>
-	    </div>
-	  </footer>
-	
-	<nav class="top-bar shadow" data-topbar>
-	  <ul class="title-area">
-	    <li class="name">
-	      <h1><a href="#">Moneybaby</a></h1>
-	    </li>
-	    <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
-	  </ul>
-
-	  <section class="top-bar-section">
-	    <!-- Right Nav Section -->
-	    <ul class="right">
-	      <li class="active"><a href="#">Right Nav Button Active</a></li>
-	      <li class="has-dropdown">
-	        <a href="#">Right Button with Dropdown</a>
-	        <ul class="dropdown">
-	          <li><a href="#">First link in dropdown</a></li>
-	        </ul>
-	      </li>
-	    </ul>
-		    <!-- Left Nav Section -->
-		    <ul class="left">
-		      <li><a href="#">Insurance</a></li>
-			  <li><a href="#">Money</a></li>
-			  <li><a href="#">Travel</a></li>
-			  <li><a href="#">Blog</a></li>
-			  <li><%= link_to_function "More", "$('#more').slideToggle(150)" %></li>
-		    </ul>
-		  </section>
-		</nav>
-		
+	<%= render 'layouts/drawer' %>
+	<%= render 'layouts/header' %>
 	 <!-- <p class="notice"><%= notice %></p>
      <p class="alert"><%= alert %></p> -->
-  <div class="main-wrapper brown">
+
+	<div class="main">
     <%= yield %>
-  </div>
-    <%= javascript_include_tag "application" %>
-
-  <footer class="copyright">
-      <br />
-	  <br />
-      <br />
-      <div class="row">
-		<div class="large-12 columns">
-        	<h3 class="text-center"><a href="#" style="color: #333;">Moneybaby</a></h3>  
-	 	</div>
-	  </div>
-	<br />
-	  <div class="row">
-		<div class="large-12 columns">
-			<h5 class="text-center"><small>&copy; All Rights Reserved. Moneybaby® is a registered trademark of The Webstasy Company.</small></h5>
-		</div>
-      </div>
-	  <br />
     </div>
-  </footer>
 
-  <!-- End Footer -->
+    <%= render 'layouts/footer' %>
 
+    <%= javascript_include_tag "application" %>
     
   </body>
 </html>

@@ -1,0 +1,24 @@
+.top-bar {
+  padding-left: 2em;
+  padding-right: 2em;
+}
+
+.top-bar-section {
+
+  li {
+  	padding-left: 0.4rem !important;
+    padding-right: 0.4rem !important;
+	}
+
+}
+
+.shadow {
+  -webkit-box-shadow: 0 1px 1px rgba(6,8,8,0.1);
+  box-shadow: 0 1px 1px rgba(6,8,8,0.1);
+}
+
+.copyright {
+  background: #f2f2f2;
+  padding-top: 3em;
+  padding-bottom: 3em;
+}

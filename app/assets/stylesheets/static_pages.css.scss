@@ -10,24 +10,6 @@
   opacity: 0;
 }
 
-.top-bar-section {
-
-  li {
-  	padding-left: 0.4rem !important;
-    padding-right: 0.4rem !important;
-}
-
-}
-
-.shadow {
-  -webkit-box-shadow: 0 1px 1px rgba(6,8,8,0.1);
-  box-shadow: 0 1px 1px rgba(6,8,8,0.1);
-}
-
-.copyright {
-  background: #f2f2f2;
-}
-
 .brown {
   background: #e9eae5;
 }
@@ -45,6 +27,8 @@
   padding-top: 60px;
   padding-bottom: 60px;
   background: #5d5b5c;
+
+	z-index: 500;
 
     .row {
   	  max-width: 75rem !important;
@@ -73,6 +57,14 @@
 	  border-bottom-color:#fff !important;
 	}
 	
+}
+
+.intro {
+  text-align: center;
+  letter-spacing: -1px;
+  line-height: 1.2em;
+  margin-top: 1em;
+  margin-bottom: 1em;
 }
 
 

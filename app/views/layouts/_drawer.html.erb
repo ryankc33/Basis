@@ -1,0 +1,39 @@
+<footer class="drawer hide" id="more">
+    <div class="row">
+		<%= link_to_function "X", "$('#more').slideToggle(150)", class: "right" %>
+	  </div>
+	  <div class="row nopadding">
+		<div class="large-3 columns">
+			<ul class="nobullet">
+      		<h3>About</h3>  
+		    	<li><%= link_to 'About Moneybaby', about_path %></li>
+				<li><a href="#">Jobs</a></li>
+				<li><a href="#">Policies</a></li>
+			</ul>
+	 	</div>
+		<div class="large-3 columns"> 
+			<ul class="nobullet">
+      		<h3>Support</h3>  
+		    	<li><%= link_to 'Help', help_path %></li>
+				<li><a href="#">...</a></li>
+				<li><a href="#">...</a></li>
+			</ul>
+	 	</div>
+		<div class="large-3 columns">
+			<ul class="nobullet">
+      		<h3>Resources</h3>
+		    	<li><a href="#">Guides</a></li>
+				<li><a href="#">Experts</a></li>
+			</ul>
+	 	</div>
+		<div class="large-3 columns">
+			<ul class="nobullet">
+      		<h3>Contact us</h3>
+		    	<li><%= link_to "Contact", contact_path %></li>
+				<li><a href="#">Feedback</a></li>
+				<li><a href="#">Press</a></li>
+			</ul>  
+	 	</div>
+	  </div>
+  </div>
+</footer>
