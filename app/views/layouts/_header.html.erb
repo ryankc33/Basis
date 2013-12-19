@@ -21,7 +21,13 @@
     </ul>
 	    <!-- Left Nav Section -->
 	 <ul class="left">
-	 	<li><a href="#">Insurance</a></li>
+		<li class="has-dropdown">
+			<a href="#">Insurance</a>
+			<ul class="dropdown">
+				<li><%= link_to 'Life Insurance', life_insurances_path %></li>
+			</ul>
+		</li>
+	
 		<li><a href="#">Money</a></li>
 		<li><a href="#">Blog</a></li>
 		<li><%= link_to_function "More", "$('#more').slideToggle(150)" %></li>

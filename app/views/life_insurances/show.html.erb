@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Reviewable:</strong>
+  <%= @life_insurance.reviewable %>
+</p>
+
+<p>
+  <strong>Monthly premium base:</strong>
+  <%= @life_insurance.monthly_premium_base %>
+</p>
+
+<%= link_to 'Edit', edit_life_insurance_path(@life_insurance) %> |
+<%= link_to 'Back', life_insurances_path %>

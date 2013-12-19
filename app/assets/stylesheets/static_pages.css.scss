@@ -59,6 +59,18 @@
 	
 }
 
+@media #{$medium-up} { 
+	.introside {
+	  padding-top: rem-calc(200);
+	}
+}
+
+@media #{$small-only} { 
+	.introside {
+	  padding-top: rem-calc(50);
+	}
+}
+
 .intro {
   text-align: center;
   letter-spacing: -1px;

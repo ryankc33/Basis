@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe "Static pages" do
+describe "Routes" do
 
   subject { page }
 
@@ -8,7 +8,7 @@ describe "Static pages" do
     before { visit root_path }
 
     it { should have_content('Moneybaby') }
-    it { should have_title(full_title('Malaysia''''s No.1 Financial Comparison Site')) }
+    it { should have_title(full_title('Compare Malaysia insurance, credit cards, mortgages')) }
     it { should_not have_title('| Home') }
   end
 
@@ -32,4 +32,12 @@ describe "Static pages" do
     it { should have_content('Contact Moneybaby') }
     it { should have_title(full_title('Contact')) }
   end
+  
+  describe "Life Insurance index" do
+    before { visit life_insurances_path }
+    
+    it { should have_content('Life Insurance') }
+    it { should have_title(full_title('Compare Cheap Life Insurance Policies in Malaysia')) }
+  end
+  
 end
