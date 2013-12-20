@@ -1,3 +1,12 @@
+GIT
+  remote: https://github.com/FylmTM/foundation-rails.git
+  revision: 5b30f1c1c36b0857c17c17d7cd27eb9d66b900d0
+  branch: turbolinks-fix
+  specs:
+    foundation-rails (5.0.2.0)
+      railties (>= 3.1.0)
+      sass (>= 3.2.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -67,9 +76,6 @@ GEM
     font-awesome-rails (4.0.3.0)
       railties (>= 3.2, < 5.0)
     formatador (0.2.4)
-    foundation-rails (5.0.2.0)
-      railties (>= 3.1.0)
-      sass (>= 3.2.0)
     guard (2.2.4)
       formatador (>= 0.2.4)
       listen (~> 2.1)
@@ -231,7 +237,7 @@ DEPENDENCIES
   database_cleaner (~> 1.2.0)
   devise (~> 3.2.2)
   factory_girl_rails (~> 4.3.0)
-  foundation-rails
+  foundation-rails!
   guard-rspec (~> 4.2.0)
   jbuilder (~> 1.2)
   jquery-rails (~> 3.0.4)

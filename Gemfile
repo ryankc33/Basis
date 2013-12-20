@@ -52,6 +52,7 @@ group :test do
 end
 
 gem 'thin'
-gem 'foundation-rails'
+# gem 'foundation-rails'
+gem 'foundation-rails', :git => "https://github.com/FylmTM/foundation-rails.git", :branch => "turbolinks-fix"
 gem 'rails_admin'
 
