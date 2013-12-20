@@ -23,42 +23,6 @@
   list-style-type: none;
 }
 
-.drawer {
-  padding-top: 60px;
-  padding-bottom: 60px;
-  background: #5d5b5c;
-
-	z-index: 500;
-
-    .row {
-  	  max-width: 75rem !important;
-	}
-
-	h3 {
-	  color:#fff !important;
-	  font-size: 18px !important;
-	  font-weight: 500;
-	  padding-bottom: 1em !important;
-	}
-	
-	a {
-	  color:#e9eae5 !important;
-	  font-size: 0.75rem;
-	  font-weight: normal !important;
-	  border-bottom: 1px solid transparent !important;
-	  -o-transition: all 0.3s linear;
-	  -moz-transition: all 0.3s linear;
-	  -webkit-transition: all 0.3s linear;
-      transition: all 0.3s linear;
-	}
-	
-	a:hover {
-	  color:#fff !important;
-	  border-bottom-color:#fff !important;
-	}
-	
-}
-
 @media #{$medium-up} { 
 	.introside {
 	  padding-top: rem-calc(200);
