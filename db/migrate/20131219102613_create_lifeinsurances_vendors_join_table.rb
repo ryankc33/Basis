@@ -1,6 +1,6 @@
 class CreateLifeInsurancesVendorsJoinTable < ActiveRecord::Migration
   def change
-    create_table :lifeinsurances_vendors, :id => false do |t|
+    create_table :life_insurances_vendors, :id => false do |t|
       t.belongs_to :life_insurance
       t.belongs_to :vendor
     end

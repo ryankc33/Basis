@@ -41,8 +41,8 @@ ActiveRecord::Schema.define(version: 20131219102613) do
     t.datetime "updated_at"
   end
 
-  create_table "lifeinsurances_vendors", id: false, force: true do |t|
-    t.integer "lifeinsurance_id"
+  create_table "life_insurances_vendors", id: false, force: true do |t|
+    t.integer "life_insurance_id"
     t.integer "vendor_id"
   end
 
