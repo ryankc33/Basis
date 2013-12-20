@@ -2,6 +2,10 @@
 # All this logic will automatically be available in application.js.
 # You can use CoffeeScript in this file: http://coffeescript.org/
 
-$(".introslide").animate
-  opacity: 1
-  "margin-top": "0px", 500
+ready = ->
+	$(".introslide").animate
+	  opacity: 1
+	  "margin-top": "0px", 500
+
+$(document).ready(ready)
+$(document).on('page:load', ready)
