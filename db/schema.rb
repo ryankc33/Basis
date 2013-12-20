@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131219102613) do
+ActiveRecord::Schema.define(version: 20131220025305) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -45,6 +45,9 @@ ActiveRecord::Schema.define(version: 20131219102613) do
     t.integer "life_insurance_id"
     t.integer "vendor_id"
   end
+
+  add_index "life_insurances_vendors", ["life_insurance_id", "vendor_id"], name: "lifeinsurancevendor", using: :btree
+  add_index "life_insurances_vendors", ["vendor_id"], name: "index_life_insurances_vendors_on_vendor_id", using: :btree
 
   create_table "rails_admin_histories", force: true do |t|
     t.text     "message"
