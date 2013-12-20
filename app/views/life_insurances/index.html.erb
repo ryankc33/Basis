@@ -1,31 +1,40 @@
 <% provide(:title, 'Compare Cheap Life Insurance Policies in Malaysia') %>
 
-<h1>Listing life_insurances</h1>
+<div class="row">
+	<div class="large-12 columns pageheader">
+	<h3 class="left"><strong>comparing life insurance<br></strong> 
+	<p>throughout Malaysia</p></h3>
+	<h6 class="right">Call us: 1300-moneybaby<h4>
+	</div>
+	
+	<div class="large-12 columns main">
 
-<table>
-  <thead>
-    <tr>
-      <th>Reviewable</th>
-      <th>Monthly premium base</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
+		<table>
+		  <thead>
+		    <tr>
+		      <th>Reviewable</th>
+		      <th>Monthly premium base</th>
+		      <th></th>
+		      <th></th>
+		      <th></th>
+		    </tr>
+		  </thead>
 
-  <tbody>
-    <% @life_insurances.each do |life_insurance| %>
-      <tr>
-        <td><%= life_insurance.reviewable %></td>
-        <td><%= life_insurance.monthly_premium_base %></td>
-        <td><%= link_to 'Show', life_insurance %></td>
-        <td><%= link_to 'Edit', edit_life_insurance_path(life_insurance) %></td>
-        <td><%= link_to 'Destroy', life_insurance, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+		  <tbody>
+		    <% @life_insurances.each do |life_insurance| %>
+		      <tr>
+		        <td><%= life_insurance.reviewable %></td>
+		        <td><%= life_insurance.monthly_premium_base %></td>
+		        <td><%= link_to 'Show', life_insurance %></td>
+		        <td><%= link_to 'Edit', edit_life_insurance_path(life_insurance) %></td>
+		        <td><%= link_to 'Destroy', life_insurance, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+		      </tr>
+		    <% end %>
+		  </tbody>
+		</table>
 
-<br>
+		<br>
 
-<%= link_to 'New Life insurance', new_life_insurance_path %>
+		<%= link_to 'New Life insurance', new_life_insurance_path %>
+	</div>
+</div>

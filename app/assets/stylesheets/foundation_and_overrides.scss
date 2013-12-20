@@ -35,7 +35,7 @@
 // $total-columns: 12;
 
 // We use these to control various global styles
-// $body-bg: #fff;
+$body-bg: #f2f2f2;
 // $body-font-color: #222;
 // $body-font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
 // $body-font-weight: normal;
@@ -931,7 +931,7 @@ $topbar-bg-color: #fff;
 // $topbar-bg: $topbar-bg-color;
 
 // Height and margin
-$topbar-height: 60px;
+$topbar-height: 50px;
 // $topbar-margin-bottom: 0;
 
 // Control Input height for top bar
@@ -944,7 +944,7 @@ $topbar-height: 60px;
 $topbar-dropdown-bg: #fff;
 $topbar-dropdown-link-color: #3a3a3a;
 $topbar-dropdown-link-bg: #fff;
-// $topbar-dropdown-toggle-size: 5px;
+$topbar-dropdown-toggle-size: 8px;
 $topbar-dropdown-toggle-color: #333;
 // $topbar-dropdown-toggle-alpha: 0.4;
 
@@ -955,9 +955,9 @@ $topbar-link-color-active: #e85c41;
 $topbar-link-weight: bold;
 // $topbar-link-font-size: rem-calc(13);
 // $topbar-link-hover-lightness: -10%; // Darken by 10%
-$topbar-link-bg-hover: #f9f9f9  ;
+$topbar-link-bg-hover: #fff  ;
 $topbar-link-bg-active: #ffffff;
-$topbar-link-bg-active-hover: #f9f9f9 ;
+$topbar-link-bg-active-hover: #fff;
 // $topbar-link-font-family: $body-font-family;
 
 // $topbar-button-font-size: 0.75rem;
