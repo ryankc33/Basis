@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe "Routes" do
+describe "Static Page Routes" do
 
   subject { page }
 
@@ -33,11 +33,6 @@ describe "Routes" do
     it { should have_title(full_title('Contact')) }
   end
   
-  describe "Life Insurance index" do
-    before { visit life_insurances_path }
-    
-    it { should have_content('Life Insurance') }
-    it { should have_title(full_title('Compare Cheap Life Insurance Policies in Malaysia')) }
-  end
+
   
 end

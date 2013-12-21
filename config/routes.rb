@@ -1,14 +1,17 @@
 Moneybaby::Application.routes.draw do
   
-  devise_for :vendors
-
-  devise_for :admins
-  mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
-  
   root  'static_pages#home'
   match '/help',    to: 'static_pages#help',    via: 'get'
   match '/about',   to: 'static_pages#about',   via: 'get'
   match '/contact', to: 'static_pages#contact', via: 'get'
+  
+  
+  devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
+  
+  devise_for :vendors
+
+  devise_for :admins
+  mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
   
   resources :life_insurances, :path => "lifeinsurance"
   

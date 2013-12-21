@@ -37,8 +37,6 @@ group :doc do
   gem 'sdoc', require: false
 end
 
-gem "devise", "~> 3.2.2"
-
 group :development, :test do
   gem 'rspec-rails', "~> 2.14.0"
 end
@@ -51,6 +49,8 @@ group :test do
   gem 'database_cleaner', "~> 1.2.0"
 end
 
+gem "devise", "~> 3.2.2"
+gem 'omniauth-google-oauth2'
 gem 'thin'
 # gem 'foundation-rails'
 gem 'foundation-rails', :git => "https://github.com/FylmTM/foundation-rails.git", :branch => "turbolinks-fix"

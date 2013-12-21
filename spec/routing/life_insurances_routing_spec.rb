@@ -2,16 +2,24 @@ require "spec_helper"
 
 describe LifeInsurancesController do
   describe "routing" do
+    
+    subject { page }
+    
+    describe "Life Insurance index" do
+      before { visit life_insurances_path }
 
-    it "routes to #index" do
-      get("/life_insurances").should route_to("life_insurances#index")
+      it { should have_content('Life Insurance') }
+      it { should have_title(full_title('Compare Cheap Life Insurance Policies in Malaysia')) }
+    end
+    
+    describe "Life Insurance New" do
+      before { visit new_life_insurance_path }
+      
+      it { should have_content('New Life Insurance') }
     end
 
-    it "routes to #new" do
-      get("/life_insurances/new").should route_to("life_insurances#new")
-    end
-
-    it "routes to #show" do
+    describe "Life Insurance Page" do
+      
       get("/life_insurances/1").should route_to("life_insurances#show", :id => "1")
     end
 
