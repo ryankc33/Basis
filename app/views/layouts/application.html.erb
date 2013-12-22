@@ -6,7 +6,9 @@
 
     <%= stylesheet_link_tag    "application", "data-turbolinks-track" => true %>
     <%= javascript_include_tag "vendor/modernizr" %>
+    <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
     <%= csrf_meta_tags %>
+	
 	<%= favicon_link_tag 'moneybabyfavicon16X16.png' %>
     <title><%= full_title(yield(:title)) %></title>
   </head>
@@ -20,8 +22,6 @@
     <%= yield %>
 
     <%= render 'layouts/footer' %>
-
-    <%= javascript_include_tag "application" %>
     
   </body>
 </html>
