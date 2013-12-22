@@ -1,16 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <title><%= full_title(yield(:title)) %></title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <%= stylesheet_link_tag    "application", "data-turbolinks-track" => true %>
-    <%= javascript_include_tag "vendor/modernizr" %>
     <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
     <%= csrf_meta_tags %>
 	
-	<%= favicon_link_tag 'moneybabyfavicon16X16.png' %>
-    <title><%= full_title(yield(:title)) %></title>
   </head>
 
   <body>
