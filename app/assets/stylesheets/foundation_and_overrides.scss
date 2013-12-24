@@ -932,7 +932,7 @@ $topbar-bg-color: #fff;
 
 // Height and margin
 $topbar-height: 50px;
-// $topbar-margin-bottom: 0;
+$topbar-margin-bottom: 10px;
 
 // Control Input height for top bar
 
@@ -952,13 +952,13 @@ $topbar-dropdown-toggle-color: #333;
 $topbar-link-color: #333;
 $topbar-link-color-hover: #ffffff;
 $topbar-link-color-active: #fff;
-// $topbar-link-color-active: #e85c41;
+// $topbar-link-color-active: #2ECC71;
 $topbar-link-weight: bold;
 // $topbar-link-font-size: rem-calc(13);
 // $topbar-link-hover-lightness: -10%; // Darken by 10%
-$topbar-link-bg-hover: #1ABC9C;
-$topbar-link-bg-active: #1ABC9C;
-$topbar-link-bg-active-hover: #1ABC9C;
+$topbar-link-bg-hover: #2ECC71;
+$topbar-link-bg-active: #2ECC71;
+$topbar-link-bg-active-hover: #2ECC71;
 // $topbar-link-font-family: $body-font-family;
 
 // $topbar-button-font-size: 0.75rem;
