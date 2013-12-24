@@ -3,15 +3,6 @@
   padding-right: 2em;
 }
 
-.top-bar-section {
-
-  li {
-  	padding-left: 0.4rem !important;
-    padding-right: 0.4rem !important;
-	}
-
-}
-
 .shadow {
   -webkit-box-shadow: 0 1px 1px rgba(6,8,8,0.1);
   box-shadow: 0 1px 1px rgba(6,8,8,0.1);
@@ -21,7 +12,21 @@
   background: #f2f2f2;
   padding-top: 3em;
   padding-bottom: 3em;
-}
+} 
+
+	.has-dropdown.active:after {
+		content:"";
+		position:absolute;
+		bottom:-15px; /* value = - border-top-width - border-bottom-width */
+		left:50px; /* controls horizontal position */
+		border-width:15px 15px 0; /* vary these values to change the angle of the vertex */
+		border-style:solid;
+		border-color:#1ABC9C transparent;
+	    /* reduce the damage in FF3.0 */
+	    display:block;
+	    width:0;
+	}
+
 
 .drawer {
   padding-top: 60px;

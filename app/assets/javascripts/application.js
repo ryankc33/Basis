@@ -18,5 +18,14 @@
 // = require_tree .
 //= require modernizr
 
-$(function(){ $(document).foundation(); });
+$(function(){ $(document).foundation();
+	
+	$('.active')
+		.closest('li.has-dropdown')
+		.addClass('active');
+		
+ });
+
+
+
 
