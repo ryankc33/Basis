@@ -1,0 +1,109 @@
+<%= form_for(@car_insurance_quote) do |f| %>
+  <% if @car_insurance_quote.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@car_insurance_quote.errors.count, "error") %> prohibited this car_insurance_quote from being saved:</h2>
+
+      <ul>
+      <% @car_insurance_quote.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :car_registration_number %><br>
+    <%= f.text_field :car_registration_number %>
+  </div>
+  <div class="field">
+    <%= f.label :car_modified %><br>
+    <%= f.check_box :car_modified %>
+  </div>
+  <div class="field">
+    <%= f.label :car_purchase_date %><br>
+    <%= f.date_select :car_purchase_date %>
+  </div>
+  <div class="field">
+    <%= f.label :owner_and_keeper %><br>
+    <%= f.check_box :owner_and_keeper %>
+  </div>
+  <div class="field">
+    <%= f.label :car_usage %><br>
+    <%= f.text_field :car_usage %>
+  </div>
+  <div class="field">
+    <%= f.label :annual_distance %><br>
+    <%= f.number_field :annual_distance %>
+  </div>
+  <div class="field">
+    <%= f.label :car_storage %><br>
+    <%= f.text_field :car_storage %>
+  </div>
+  <div class="field">
+    <%= f.label :total_cars_owned %><br>
+    <%= f.number_field :total_cars_owned %>
+  </div>
+  <div class="field">
+    <%= f.label :car_model %><br>
+    <%= f.text_field :car_model %>
+  </div>
+  <div class="field">
+    <%= f.label :applicant_first_name %><br>
+    <%= f.text_field :applicant_first_name %>
+  </div>
+  <div class="field">
+    <%= f.label :applicant_surname %><br>
+    <%= f.text_field :applicant_surname %>
+  </div>
+  <div class="field">
+    <%= f.label :applicant_gender %><br>
+    <%= f.text_field :applicant_gender %>
+  </div>
+  <div class="field">
+    <%= f.label :applicant_date_of_birth %><br>
+    <%= f.date_select :applicant_date_of_birth %>
+  </div>
+  <div class="field">
+    <%= f.label :applicant_marital_status %><br>
+    <%= f.text_field :applicant_marital_status %>
+  </div>
+  <div class="field">
+    <%= f.label :applicant_children_under16 %><br>
+    <%= f.number_field :applicant_children_under16 %>
+  </div>
+  <div class="field">
+    <%= f.label :applicant_occupation %><br>
+    <%= f.text_field :applicant_occupation %>
+  </div>
+  <div class="field">
+    <%= f.label :applicant_employer_type %><br>
+    <%= f.text_field :applicant_employer_type %>
+  </div>
+  <div class="field">
+    <%= f.label :applicant_address %><br>
+    <%= f.text_field :applicant_address %>
+  </div>
+  <div class="field">
+    <%= f.label :applicant_postcode %><br>
+    <%= f.text_field :applicant_postcode %>
+  </div>
+  <div class="field">
+    <%= f.label :applicant_phone_number %><br>
+    <%= f.text_area :applicant_phone_number %>
+  </div>
+  <div class="field">
+    <%= f.label :applicant_previous_claim %><br>
+    <%= f.check_box :applicant_previous_claim %>
+  </div>
+  <div class="field">
+    <%= f.label :applicant_motoring_offences %><br>
+    <%= f.check_box :applicant_motoring_offences %>
+  </div>
+  <div class="field">
+    <%= f.label :applicant_convictions %><br>
+    <%= f.check_box :applicant_convictions %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

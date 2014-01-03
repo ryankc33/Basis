@@ -1,0 +1,61 @@
+<h1>Listing lifequotes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Cover amount</th>
+      <th>Cover</th>
+      <th>Cover type</th>
+      <th>Cover duration</th>
+      <th>Joint cover</th>
+      <th>Monthly payment</th>
+      <th>Applicant title</th>
+      <th>Applicant firstname</th>
+      <th>Applicant lastname</th>
+      <th>Email</th>
+      <th>Applicant date of birth</th>
+      <th>Applicant phone</th>
+      <th>Smoking</th>
+      <th>Joint applicant title</th>
+      <th>Joint applicant firstname</th>
+      <th>Joint applicant lastname</th>
+      <th>Joint applicant date of birth</th>
+      <th>Joint applicant smoking</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @lifequotes.each do |lifequote| %>
+      <tr>
+        <td><%= lifequote.cover_amount %></td>
+        <td><%= lifequote.cover %></td>
+        <td><%= lifequote.cover_type %></td>
+        <td><%= lifequote.cover_duration %></td>
+        <td><%= lifequote.joint_cover %></td>
+        <td><%= lifequote.monthly_payment %></td>
+        <td><%= lifequote.applicant_title %></td>
+        <td><%= lifequote.applicant_firstname %></td>
+        <td><%= lifequote.applicant_lastname %></td>
+        <td><%= lifequote.email %></td>
+        <td><%= lifequote.applicant_date_of_birth %></td>
+        <td><%= lifequote.applicant_phone %></td>
+        <td><%= lifequote.smoking %></td>
+        <td><%= lifequote.joint_applicant_title %></td>
+        <td><%= lifequote.joint_applicant_firstname %></td>
+        <td><%= lifequote.joint_applicant_lastname %></td>
+        <td><%= lifequote.joint_applicant_date_of_birth %></td>
+        <td><%= lifequote.joint_applicant_smoking %></td>
+        <td><%= link_to 'Show', lifequote %></td>
+        <td><%= link_to 'Edit', edit_lifequote_path(lifequote) %></td>
+        <td><%= link_to 'Destroy', lifequote, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Lifequote', new_lifequote_path %>

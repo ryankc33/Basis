@@ -1,0 +1,71 @@
+<h1>Listing car_insurance_quotes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Car registration number</th>
+      <th>Car modified</th>
+      <th>Car purchase date</th>
+      <th>Owner and keeper</th>
+      <th>Car usage</th>
+      <th>Annual distance</th>
+      <th>Car storage</th>
+      <th>Total cars owned</th>
+      <th>Car model</th>
+      <th>Applicant first name</th>
+      <th>Applicant surname</th>
+      <th>Applicant gender</th>
+      <th>Applicant date of birth</th>
+      <th>Applicant marital status</th>
+      <th>Applicant children under16</th>
+      <th>Applicant occupation</th>
+      <th>Applicant employer type</th>
+      <th>Applicant address</th>
+      <th>Applicant postcode</th>
+      <th>Applicant phone number</th>
+      <th>Applicant previous claim</th>
+      <th>Applicant motoring offences</th>
+      <th>Applicant convictions</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @car_insurance_quotes.each do |car_insurance_quote| %>
+      <tr>
+        <td><%= car_insurance_quote.car_registration_number %></td>
+        <td><%= car_insurance_quote.car_modified %></td>
+        <td><%= car_insurance_quote.car_purchase_date %></td>
+        <td><%= car_insurance_quote.owner_and_keeper %></td>
+        <td><%= car_insurance_quote.car_usage %></td>
+        <td><%= car_insurance_quote.annual_distance %></td>
+        <td><%= car_insurance_quote.car_storage %></td>
+        <td><%= car_insurance_quote.total_cars_owned %></td>
+        <td><%= car_insurance_quote.car_model %></td>
+        <td><%= car_insurance_quote.applicant_first_name %></td>
+        <td><%= car_insurance_quote.applicant_surname %></td>
+        <td><%= car_insurance_quote.applicant_gender %></td>
+        <td><%= car_insurance_quote.applicant_date_of_birth %></td>
+        <td><%= car_insurance_quote.applicant_marital_status %></td>
+        <td><%= car_insurance_quote.applicant_children_under16 %></td>
+        <td><%= car_insurance_quote.applicant_occupation %></td>
+        <td><%= car_insurance_quote.applicant_employer_type %></td>
+        <td><%= car_insurance_quote.applicant_address %></td>
+        <td><%= car_insurance_quote.applicant_postcode %></td>
+        <td><%= car_insurance_quote.applicant_phone_number %></td>
+        <td><%= car_insurance_quote.applicant_previous_claim %></td>
+        <td><%= car_insurance_quote.applicant_motoring_offences %></td>
+        <td><%= car_insurance_quote.applicant_convictions %></td>
+        <td><%= link_to 'Show', car_insurance_quote %></td>
+        <td><%= link_to 'Edit', edit_car_insurance_quote_path(car_insurance_quote) %></td>
+        <td><%= link_to 'Destroy', car_insurance_quote, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Car insurance quote', new_car_insurance_quote_path %>

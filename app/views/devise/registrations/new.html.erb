@@ -1,0 +1,35 @@
+<% provide(:title, 'Create My Account') %>
+
+<div class ="row fixed400">
+	
+	<div class="large-5 small-centered columns toppad-large">
+		<h4><strong>Get Started with a Free Account</strong></h4>
+		<p>Sign up in 30 seconds. If you already have a Moneybaby account <%= link_to "log in", new_session_path(resource_name)%>.</p>
+	</div>
+
+	<div class="large-5 small-centered columns toppad-medium">
+		<%= simple_form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
+		
+  		<%= f.error_notification %>
+
+  		<div class="form-inputs">
+    		<%= f.input :email, :required => true, :autofocus => true, :hint => "What's your email?" %>
+			<% if resource.has_attribute? :username %>
+	    	<%= f.input :username, :required => true, :hint => "Choose a username with numbers and letters" %>
+			<% end %>
+		    <%= f.input :password, :required => true, :hint => "6 characters that's easy to remember, hard to forget." %>
+  		</div>
+
+		<div class="large-12 columns nopadding">
+			<div class="form-actions">
+				<div class="small-6 columns form-actions nopadding">
+	   				<%= f.button :submit, "Sign me up!", class: "small-12 columns alert radius" %>
+				</div>
+			</div>
+		</div>
+		<% end %>
+	</div>
+
+</div>
+
+

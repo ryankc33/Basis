@@ -7,13 +7,17 @@ Moneybaby::Application.routes.draw do
   
   
   devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
-  
   devise_for :vendors
-
-  devise_for :admins
+  
+  
+  devise_for :admins, :controllers => { :sessions => "sessions" }
   mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
   
+  resources :car_insurances, :path =>"carinsurance"
+  resources :car_insurance_quotes
+
   resources :life_insurances, :path => "lifeinsurance"
+  resources :lifequotes
   
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

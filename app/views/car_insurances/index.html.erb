@@ -1,0 +1,44 @@
+<% provide(:title, 'Compare Cheap Car Insurance Policies in Malaysia') %>
+
+<div class="row">
+	<div class="large-12 columns pageheader">
+	<h3 class="left"><strong>comparing car insurance<br></strong> 
+	<p>throughout Malaysia</p></h3>
+	<h6 class="right"><strong>Need help?</strong><br> Call us: 1300-moneybaby<h4>
+	</div>
+	
+	<div class="large-12 columns main introslide">
+
+		<table>
+		  <thead>
+		    <tr>
+		      <th>Name</th>
+		      <th>Premium base</th>
+		      <th>Description</th>
+		      <th>Benefits</th>
+		      <th></th>
+		      <th></th>
+		      <th></th>
+		    </tr>
+		  </thead>
+
+		  <tbody>
+		    <% @car_insurances.each do |car_insurance| %>
+		      <tr>
+		        <td><%= car_insurance.name %></td>
+		        <td><%= car_insurance.premium_base %></td>
+		        <td><%= car_insurance.description %></td>
+		        <td><%= car_insurance.benefits %></td>
+		        <td><%= link_to 'Show', car_insurance %></td>
+		        <td><%= link_to 'Edit', edit_car_insurance_path(car_insurance) %></td>
+		        <td><%= link_to 'Destroy', car_insurance, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+		      </tr>
+		    <% end %>
+		  </tbody>
+		</table>
+
+		<br>
+
+		<%= link_to 'New Car insurance', new_car_insurance_path %>
+	</div>
+</div>

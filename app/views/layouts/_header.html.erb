@@ -10,7 +10,28 @@
 
   <section class="top-bar-section">
 	 <ul class="right">
-		<li><%= link_to "Sign in with Google", user_omniauth_authorize_path(:google_oauth2) %></li>
+		<% if signed_in? %>
+			<li class="has-dropdown">
+			<% if current_admin %>
+			<a><%= current_admin.username %></a>
+			<ul class="dropdown">
+				<li><%= link_to "Logout", destroy_admin_session_path, :method => :delete %>
+			</ul>
+				<% elsif current_user %>
+				<a><%= current_user.username %></a>
+				<ul class="dropdown">
+					<li><%= link_to "Logout", destroy_user_session_path, :method => :delete %>
+				</ul>
+				<% else current_vendor %>
+				<a><%= current_vendor.email %></a>
+				<ul class="dropdown">
+					<li><%= link_to "Logout", destroy_vendor_session_path, :method => :delete %>
+				</ul>
+			<% end %>
+			</li>
+		<% else %>
+			<li><%= link_to "Log in", new_user_session_path %></li>
+		<% end %>
 	 </ul>
 
 	 <ul class="left">
@@ -18,6 +39,7 @@
 			<a>Insurance</a>
 			<ul class="dropdown">
 				<li><%= nav_link 'Life Insurance', life_insurances_path %></li>
+				<li><%= nav_link 'Car Insurance', car_insurances_path %></li>
 			</ul>
 		</li>
 	

@@ -1,0 +1,30 @@
+@import 'foundation_and_overrides.scss';
+
+.verticalcenter {
+  vertical-align: middle;
+}
+
+.alert {
+  @include alert($warning-color);
+}
+
+@media #{$medium-only} { 
+	.fixed400 {
+		max-width: 400px !important;
+	}
+}
+
+@media #{$small-only} { 
+	.fixed400 {
+		max-width: 400px !important;
+	}
+}
+
+.field_with_hint {
+	span.hint {
+		font-size: 0.9em;
+		color: #666666;
+		margin-bottom: 2em !important;
+		display: none;
+	}
+}

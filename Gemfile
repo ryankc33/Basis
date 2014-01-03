@@ -39,22 +39,29 @@ group :doc do
 end
 
 group :development, :test do
-  gem 'rspec-rails', "~> 2.14.0"
-  gem 'meta_request'
+  gem 'rspec-rails', '~> 3.0.0.beta'
+  gem 'meta_request', "~> 0.2.8"
+  gem 'guard-rspec', "~> 4.2.1"
+  gem 'guard-livereload', "~>2.1.0"
+  gem 'childprocess', "~> 0.3.9"
+  gem 'rb-fsevent'
 end
 
 group :test do
   gem "factory_girl_rails", "~> 4.3.0"
   gem "capybara", "~> 2.2.0"
-  gem "guard-rspec", "~> 4.2.0"
+  gem "selenium-webdriver", "~> 2.39.0"
   gem 'launchy' , "~> 2.4.2"
   gem 'database_cleaner', "~> 1.2.0"
 end
 
+
 gem "devise", "~> 3.2.2"
 gem 'omniauth-google-oauth2'
-gem 'thin'
-# gem 'foundation-rails'
+gem 'thin', "~> 1.6.1"
 gem 'foundation-rails', :git => "https://github.com/FylmTM/foundation-rails.git", :branch => "turbolinks-fix"
-gem 'rails_admin'
+gem 'rails_admin', "~> 0.6.0"
+gem 'simple_form', "~> 3.0.0"
+gem "paperclip", "~> 3.5.2"
+gem "rmagick", "~> 2.13.2"
 

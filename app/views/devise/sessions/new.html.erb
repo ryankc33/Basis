@@ -1,0 +1,61 @@
+<% provide(:title, 'Login') %>
+
+<div class ="row fixed400">
+	
+	<div class="large-5 small-centered columns toppad-large text-center">
+		<h1><strong>log in</strong></h1>
+	</div>
+	
+	<div class="large-5 small-centered columns toppad-medium">
+	    <% flash.each do |name, msg| -%>
+				<%= content_tag :div, msg, class: "alert-box #{name} radius", :data => {:alert => nil} %>
+	    <% end -%>
+	</div>
+
+	<div class="large-5 small-centered columns">
+
+		<%= simple_form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
+		
+  		<%= f.error_notification %>
+
+		  <div class="form-inputs">
+			<% if resource.has_attribute? :username %>
+				<%= f.input :login, :required => false, :autofocus => true, :hint => "login with your username or email" %>
+			<% else %>
+		    	<%= f.input :email, :required => false, :autofocus => true %>
+			<% end %>
+			<div class="small-6 columns nopadding labelpad">
+		    <%= f.label :password, :required => false %>
+		    </div>
+		    <div class="small-6 columns nopadding labelpad text-right">
+				<%- if devise_mapping.recoverable? && controller_name != 'passwords' && controller_name != 'registrations' %>
+				  <%= link_to "Forgot?", new_password_path(resource_name) %>
+				<% end -%>
+			</div>
+		    <%= f.password_field :password %>
+		  </div>
+		  <br>
+		  <div class="large-12 columns nopadding">
+			  <div class="small-6 columns form-actions nopadding">
+			    <%= f.button :submit, "Log in", class: "small-12 columns alert radius" %>
+			  </div>
+		  
+			  <% if devise_mapping.rememberable? %>
+			  <div class="small-6 columns toppad-small bottompad-small text-right">
+				<%= f.check_box :remember_me %> <%= f.label :remember_me %> 
+			  </div>
+		  </div>
+		  <% end %>
+		
+		<% end %>
+		</div>
+	</div>
+	
+	<div class="large-5 small-centered columns text-center toppad-medium">	
+		<%- if devise_mapping.registerable? && controller_name != 'registrations' %>
+		  <%= link_to "Create an account", new_registration_path(resource_name) %>
+		<% end -%>
+	</div>
+	
+
+</div>

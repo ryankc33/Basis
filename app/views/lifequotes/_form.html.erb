@@ -1,0 +1,89 @@
+<%= form_for(@lifequote) do |f| %>
+  <% if @lifequote.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@lifequote.errors.count, "error") %> prohibited this lifequote from being saved:</h2>
+
+      <ul>
+      <% @lifequote.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :cover_amount %><br>
+    <%= f.text_field :cover_amount %>
+  </div>
+  <div class="field">
+    <%= f.label :cover %><br>
+    <%= f.text_field :cover %>
+  </div>
+  <div class="field">
+    <%= f.label :cover_type %><br>
+    <%= f.text_field :cover_type %>
+  </div>
+  <div class="field">
+    <%= f.label :cover_duration %><br>
+    <%= f.text_field :cover_duration %>
+  </div>
+  <div class="field">
+    <%= f.label :joint_cover %><br>
+    <%= f.check_box :joint_cover %>
+  </div>
+  <div class="field">
+    <%= f.label :monthly_payment %><br>
+    <%= f.check_box :monthly_payment %>
+  </div>
+  <div class="field">
+    <%= f.label :applicant_title %><br>
+    <%= f.text_field :applicant_title %>
+  </div>
+  <div class="field">
+    <%= f.label :applicant_firstname %><br>
+    <%= f.text_field :applicant_firstname %>
+  </div>
+  <div class="field">
+    <%= f.label :applicant_lastname %><br>
+    <%= f.text_field :applicant_lastname %>
+  </div>
+  <div class="field">
+    <%= f.label :email %><br>
+    <%= f.text_field :email %>
+  </div>
+  <div class="field">
+    <%= f.label :applicant_date_of_birth %><br>
+    <%= f.date_select :applicant_date_of_birth %>
+  </div>
+  <div class="field">
+    <%= f.label :applicant_phone %><br>
+    <%= f.text_area :applicant_phone %>
+  </div>
+  <div class="field">
+    <%= f.label :smoking %><br>
+    <%= f.check_box :smoking %>
+  </div>
+  <div class="field">
+    <%= f.label :joint_applicant_title %><br>
+    <%= f.text_field :joint_applicant_title %>
+  </div>
+  <div class="field">
+    <%= f.label :joint_applicant_firstname %><br>
+    <%= f.text_field :joint_applicant_firstname %>
+  </div>
+  <div class="field">
+    <%= f.label :joint_applicant_lastname %><br>
+    <%= f.text_field :joint_applicant_lastname %>
+  </div>
+  <div class="field">
+    <%= f.label :joint_applicant_date_of_birth %><br>
+    <%= f.date_select :joint_applicant_date_of_birth %>
+  </div>
+  <div class="field">
+    <%= f.label :joint_applicant_smoking %><br>
+    <%= f.check_box :joint_applicant_smoking %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,2 @@
+module CarInsurancesHelper
+end

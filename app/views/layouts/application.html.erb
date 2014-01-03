@@ -14,10 +14,15 @@
   <body>
 	<%= render 'layouts/drawer' %>
 	<%= render 'layouts/header' %>
-	 <!-- <p class="notice"><%= notice %></p>
-     <p class="alert"><%= alert %></p> -->
+	
+	<div class="row">
+	    <% flash.each do |name, msg| -%>
+				<%= content_tag :div, msg, class: "alert-box #{name} radius", :data => {:alert => nil} %>
+	    <% end -%>
+	</div>
+	
     <%= yield %>
-
+	
     <%= render 'layouts/footer' %>
     
   </body>

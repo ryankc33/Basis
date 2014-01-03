@@ -1,0 +1,36 @@
+<% provide(:title, 'Password Reset') %>
+
+<div class ="row fixed400">
+
+	<div class="large-5 small-centered columns toppad-large">
+		<h4><strong>Forgot password</strong></h4>
+		<p>We'll email you intructions on how to reset your password</p>
+	</div>
+
+	<div class="large-5 small-centered columns toppad-medium">
+		<%= simple_form_for(resource, :as => resource_name, :url => password_path(resource_name), :html => { :method => :post }) do |f| %>
+		
+  		<%= f.error_notification %>
+
+  		<div class="form-inputs">
+    		<%= f.input :email, :required => true, :autofocus => true, :hint => "what's your email?" %>
+  		</div>
+
+		<div class="large-12 columns nopadding">
+			<div class="form-actions">
+				<div class="small-6 columns form-actions nopadding">
+	   				<%= f.button :submit, "reset password", class: "small-12 columns small radius" %>
+				</div>
+			</div>
+			
+			<div class="small-6 columns toppad-small bottompad-small text-right">
+				  <%= link_to "Return to log in", new_session_path(resource_name) %>
+			</div>
+		</div>
+		
+		<% end %>
+		
+	</div>
+
+</div>
+

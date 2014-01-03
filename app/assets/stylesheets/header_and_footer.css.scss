@@ -1,3 +1,5 @@
+@import 'foundation_and_overrides.scss';
+
 .top-bar {
   padding-left: 2em;
   padding-right: 2em;
@@ -14,6 +16,7 @@
   padding-bottom: 3em;
 } 
 
+@media #{$medium-up} { 
 	.has-dropdown.active:after {
 		content:"";
 		position:absolute;
@@ -26,6 +29,7 @@
 	    display:block;
 	    width:0;
 	}
+}
 
 
 .drawer {

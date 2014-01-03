@@ -1,6 +1,36 @@
-.pageheader {
-  padding-top: 1em;
+@import 'foundation_and_overrides.scss';
+
+@mixin padding-top($em) {
+  padding-top: $em;
 }
+
+	.toppad-small { 
+		@include padding-top(1em);
+	}
+
+	.toppad-medium {
+		@include padding-top(3em);	
+	}
+
+	.toppad-large {
+		@include padding-top(5em);
+	}
+
+@mixin padding-bottom($em) {
+  padding-bottom: $em;
+}
+
+	.bottompad-small { 
+		@include padding-top(1em);
+	}
+
+	.bottompad-medium {
+		@include padding-top(3em);	
+	}
+
+	.bottompad-large {
+		@include padding-top(5em);
+	}
 
 .main {
   background-color: #ffffff;
@@ -13,4 +43,14 @@
   border-radius: 4px; /* future proofing */
   -khtml-border-radius: 4px; /* for old Konqueror browsers */
 }
+
+.nomargin {
+  margin: 0;
+}
+
+
+
+
+
+
 

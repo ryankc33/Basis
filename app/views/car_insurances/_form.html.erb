@@ -1,0 +1,11 @@
+<%= simple_form_for(@car_insurance) do |f| %>
+	<%= f.error_notification %>
+	<%= f.input :name, placeholder: 'policy name' %>
+	<%= f.input :benefits, placeholder: 'differentiation' %>
+	<%= f.input :description %>
+	<fieldset>
+		<legend>Hidden Fields</legend>
+	<%= f.input :premium_base, placeholder: 'premium multiplier on sum insured' %>
+	</fieldset>
+	<%= f.button :submit, "Save" , class: "alert radius"%>
+<% end %>
